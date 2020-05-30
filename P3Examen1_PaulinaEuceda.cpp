@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
 					cout<<"Escriba su edad: ";
 					cin >> edad;
 					
-					while(edad<0){
+					while(edad<=0){
 						cout<<"No es un valor valido. Escriba su edad: ";
 						cin >> edad;
 					}
@@ -89,7 +89,7 @@ int main(int argc, char** argv) {
 			}
 			case 2:{
 				for(int i = 0; i<empleados.size(); i++){
-					cout<< i <<") "<<empleados[i].getNombre()<<empleados[i].getEdad()<<empleados[i].getNivel()<<empleados[i].getHabilidad()<<empleados[i].getPereza()<<endl;
+					cout<< i <<") "<<empleados[i].getNombre()<<", "<<empleados[i].getEdad()<<", "<<empleados[i].getNivel()<<", "<<empleados[i].getHabilidad()<<", "<<empleados[i].getPereza()<<endl;
 				}
 				int despedirPos;
 				cout <<endl <<"Elija a quien quiere despedir: ";
@@ -226,7 +226,7 @@ int main(int argc, char** argv) {
 								break;
 							}
 							case 2:{
-								cout<<"Tareas en backlog: "<<endl
+								cout<<"Tareas en backlog: "<<backlog.size()<<endl
 									<<"Tareas en progeso: "<<tareasProgreso<<endl
 									<<"Empleados perezosos: "<<perezaEmpleados<<endl
 									<<"Empleados que fallaron: "<<fallosEmpleados<<endl
