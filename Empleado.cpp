@@ -3,12 +3,13 @@
 Empleado::Empleado()
 {
 }
-Empleado::Empleado(string nombre, int edad, int nivel, int habilidad, int pereza){
+Empleado::Empleado(string nombre, int edad, int nivel, int habilidad, int pereza, int estado){
 	this->nombre = nombre;
 	this->edad = edad;
 	this->nivel= nivel;
 	this->habilidad=habilidad;
 	this->pereza=pereza;
+	this->estado=estado;
 }
 string Empleado::getNombre(){
 	return this->nombre;
@@ -44,6 +45,24 @@ int Empleado::getPereza(){
 void Empleado::setPereza(int pereza){
 	this->pereza=pereza;	
 }
+
+Tarea Empleado::getTarea(){
+	return this->tarea;
+}
+void Empleado::setTarea(Tarea tarea){
+	this->tarea=tarea;	
+}
+void Empleado::ReducirDiasTarea(){
+	tarea.disminuirDias();
+}
+
+int Empleado::getEstado(){
+	return this -> estado;
+}
+void Empleado::setEstado(int estado){
+	this->estado=estado;
+}
+
 		
 
 Empleado::~Empleado()

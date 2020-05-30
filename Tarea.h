@@ -18,6 +18,7 @@ class Tarea
 		
 		int getCarga(); 
 		void setCarga(int);
+		void disminuirDias();
 		
 		~Tarea();
 	protected:

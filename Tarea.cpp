@@ -1,5 +1,6 @@
 #include "Tarea.h"
-
+using std::cout;
+using std::endl;
 Tarea::Tarea()
 {
 }
@@ -30,6 +31,12 @@ int Tarea::getCarga(){
 }
 void Tarea::setCarga(int carga){
 	this->carga=carga;
+}
+
+void Tarea::disminuirDias(){
+	int dias = this->carga;
+	dias--;
+	this->carga = dias;
 }
 
 Tarea::~Tarea()
